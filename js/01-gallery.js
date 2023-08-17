@@ -34,7 +34,6 @@ galleryList.addEventListener("click", (e) => {
   if (typeof dataSource === "undefined") {
     return;
   }
-  console.log("obrazek");
 
   const instance = basicLightbox.create(`
     <img src="${dataSource}" width="800" height="600">

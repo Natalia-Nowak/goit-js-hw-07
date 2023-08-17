@@ -11,7 +11,8 @@ for (const image of galleryItems) {
   const aElement = document.createElement("a");
   aElement.classList.add("gallery__item");
   aElement.href = image.original;
-  aElement.dataset.title = "amdakd";
+  aElement.title = image.description;
+
   const imgElement = document.createElement("img");
   imgElement.classList.add("gallery__image");
   imgElement.src = image.preview;
@@ -24,5 +25,5 @@ for (const image of galleryItems) {
 
 galleryList.append(...images);
 
-const lightbox = new SimpleLightbox("ul.gallery a", {});
+const lightbox = new SimpleLightbox("ul.gallery a", { captionDelay: 250 });
 console.log(lightbox);
